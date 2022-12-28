@@ -1,0 +1,17 @@
+$colors: (
+  text: (
+    primary: #1e1e1e,
+    secondary: white,
+  ),
+  theme: (
+    primary: #2f00ff,
+    secondary: #9000ff,
+    warning: #ffbb00,
+    error: red,
+    disabled: #808080,
+  ),
+);
+
+@function color($color, $tone: 1) {
+  @return map-get(map-get($colors, $color), $tone);
+}

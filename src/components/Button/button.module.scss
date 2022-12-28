@@ -1,0 +1,28 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+
+.primary,
+.secondary {
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.primary {
+  color: white;
+  background: color(theme, primary);
+  border: 2px solid color(theme, primary);
+
+  @include hover {
+    color: inherit;
+    background: none;
+  }
+}
+
+.secondary {
+  border: 2px solid color(theme, primary);
+
+  @include hover {
+    color: white;
+    background: color(theme, primary);
+  }
+}
